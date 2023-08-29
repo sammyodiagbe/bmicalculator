@@ -1,1 +1,17 @@
-/*# sourceMappingURL=app.css.map */
+div.App header {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+div.App header section.text-content {
+  background: #d8e2e7;
+  padding: 1em;
+  text-align: center;
+}
+div.App header section.text-content img,
+div.App header section.text-content h1,
+div.App header section.text-content p {
+  margin-bottom: 1em;
+}
+div.App header section.text-content h1 {
+  font-size: 48px;
+}/*# sourceMappingURL=app.css.map */

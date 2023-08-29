@@ -37,6 +37,34 @@ function App() {
               <span className="title">Imperial</span>
             </label>
           </div>
+          <div className="inputs-container metric">
+            <div className="input-container">
+              <input type="number" name="cm" />
+              <span className="unit">cm</span>
+            </div>
+            <div className="input-container">
+              <input type="number" name="kg" />
+              <span className="unit">kg</span>
+            </div>
+          </div>
+          <div className="inputs-container imperial">
+            <div className="input-container">
+              <input type="number" name="cm" />
+              <span className="unit">cm</span>
+            </div>
+            <div className="input-container">
+              <input type="number" name="kg" />
+              <span className="unit">kg</span>
+            </div>
+            <div className="input-container">
+              <input type="number" name="cm" />
+              <span className="unit">cm</span>
+            </div>
+            <div className="input-container">
+              <input type="number" name="kg" />
+              <span className="unit">kg</span>
+            </div>
+          </div>
         </form>
       </header>
       <section className="result-meaning">
@@ -55,7 +83,7 @@ function App() {
         </aside>
       </section>
       <section className="tips">
-        <dic className="tip">
+        <div className="tip">
           <img src={IconEating} alt="Eating healthy is important" />
           <div className="writeup">
             <h3>Healthy eating</h3>
@@ -64,8 +92,8 @@ function App() {
               digestion, immunity, mental clarity, and mood.
             </p>
           </div>
-        </dic>
-        <dic className="tip">
+        </div>
+        <div className="tip">
           <img src={IconExcercise} alt="Eating healthy is important" />
           <div className="writeup">
             <h3>Regular exercise</h3>
@@ -74,8 +102,8 @@ function App() {
               reduces disease risk, fostering wellness and longetivity.
             </p>
           </div>
-        </dic>
-        <dic className="tip">
+        </div>
+        <div className="tip">
           <img src={IconSleep} alt="Eating healthy is important" />
           <div className="writeup">
             <h3>Adequate sleep</h3>
@@ -84,13 +112,13 @@ function App() {
               wellness, promoting overall restoration and rejuvenation.
             </p>
           </div>
-        </dic>
+        </div>
       </section>
       <section className="limitations">
         <aside className="write-up">
           <h2>Limitations of BMI</h2>
           <p>
-            Although BMI is often a practical indicator of healthy weight, it is
+            Although BMI is often a practical indivator of healthy weight, it is
             not suited for every person. Specific groups should carefully
             consider their BMI outcomes, and in certain cases, the measurement
             may not be beneficial to use.

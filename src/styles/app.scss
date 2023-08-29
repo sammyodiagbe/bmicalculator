@@ -1,2 +1,20 @@
 div.App {
+  header {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    section.text-content {
+      background: #d8e2e7;
+      padding: 1em;
+      text-align: center;
+      img,
+      h1,
+      p {
+        margin-bottom: 1em;
+      }
+      h1 {
+        font-size: 48px;
+      }
+    }
+  }
 }
