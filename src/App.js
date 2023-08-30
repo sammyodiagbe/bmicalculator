@@ -29,7 +29,7 @@ function App() {
           </div>
           <div className="form-container">
             <form className="form">
-              <h2 className="title">Enter your details below</h2>
+              <h3 className="title">Enter your details below</h3>
               <div className="unit-container">
                 <label className="input-label" htmlFor="metric">
                   <input type="radio" id="metric" name="unit" hidden />
@@ -56,6 +56,13 @@ function App() {
                     <input placeholder="0" type="number" name="kg" />
                     <span className="unit">kg</span>
                   </div>
+                  <div className="result-container">
+                    <h3>Welcome</h3>
+                    <p>
+                      Enter your height and weight and you will see your BMI
+                      result here.
+                    </p>
+                  </div>
                 </div>
               ) : (
                 <div className="inputs-container imperial">
@@ -74,6 +81,13 @@ function App() {
                   <div className="input-container">
                     <input placeholder="0" type="number" name="kg" />
                     <span className="unit">kg</span>
+                  </div>
+                  <div className="result-container">
+                    <h3>Welcome</h3>
+                    <p>
+                      Enter your height and weight and you will see your BMI
+                      result here.
+                    </p>
                   </div>
                 </div>
               )}

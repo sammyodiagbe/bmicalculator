@@ -39,7 +39,7 @@ div.App {
       border-radius: 8px;
       box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
       form {
-        h2.title {
+        h3.title {
           margin-bottom: 0.5em;
         }
 
@@ -51,6 +51,8 @@ div.App {
           label.input-label {
             display: inline-flex;
             align-items: center;
+            font-weight: bold;
+            font-size: 0.8em;
             input {
               visibility: hidden;
               &:checked + span.custom-radio {
@@ -89,6 +91,18 @@ div.App {
 
         div.inputs-container {
           padding: 1em 0;
+          div.result-container {
+            padding: 1em;
+            background: $calltoaction;
+            border-radius: $input-radius;
+            h3 {
+              margin-bottom: 0.8em;
+            }
+            h3,
+            p {
+              color: #fff;
+            }
+          }
           div.input-container {
             display: grid;
             grid-template-columns: 1fr max-content;
@@ -117,5 +131,29 @@ div.App {
         }
       }
     }
+  }
+
+  section.result-meaning {
+    aside.write-up {
+      padding: 2em;
+    }
+  }
+
+  section.tips {
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2em;
+    div.tip {
+      h3 {
+        margin: 1em 0;
+      }
+    }
+  }
+
+  section.limitations {
+    padding: 2em;
+    display: grid;
+    row-gap: 2em;
   }
 }
