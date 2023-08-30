@@ -1,19 +1,120 @@
+$calltoaction: #345ff6;
+$input-radius: 10px;
+
 div.App {
   header {
     display: grid;
     grid-template-columns: 1fr;
-
-    section.text-content {
+    div.background {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 640px;
       background: #d8e2e7;
-      padding: 1em;
-      text-align: center;
-      img,
-      h1,
-      p {
-        margin-bottom: 1em;
+      z-index: -1;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    section.text-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+      padding: 2em;
+      div.introduction {
+        text-align: center;
+        h1,
+        p {
+          margin-bottom: 1em;
+        }
+        h1 {
+          font-size: 48px;
+        }
       }
-      h1 {
-        font-size: 48px;
+    }
+
+    div.form-container {
+      padding: 1.2em;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+      form {
+        h2.title {
+          margin-bottom: 0.5em;
+        }
+
+        div.unit-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 10px;
+          padding: 0.6em 0;
+          label.input-label {
+            display: inline-flex;
+            align-items: center;
+            input {
+              visibility: hidden;
+              &:checked + span.custom-radio {
+                background: rgba(52, 95, 246, 0.15);
+                border-color: rgba(52, 95, 246, 0.15);
+                transition-delay: 0.5s;
+                span {
+                  background: #345ff6;
+                  height: 10px;
+                  width: 10px;
+                }
+              }
+            }
+
+            span.custom-radio {
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              margin-right: 10px;
+              height: 25px;
+              border-radius: 100vh;
+              border: 1px solid lightgrey;
+              width: 25px;
+              transition: all 0.5s;
+              span.sub {
+                display: inline-block;
+                background: transparent;
+                height: 0px;
+                width: 0px;
+                border-radius: 50vh;
+                transition: all 0.5s;
+              }
+            }
+          }
+        }
+
+        div.inputs-container {
+          padding: 1em 0;
+          div.input-container {
+            display: grid;
+            grid-template-columns: 1fr max-content;
+            align-items: center;
+            margin-bottom: 1em;
+            border: 1px solid lightgrey;
+            border-radius: $input-radius;
+            padding: 0 1em;
+            input {
+              border: none;
+              outline: none;
+              padding: 1em 0;
+              font-size: 1em;
+              font-weight: bold;
+            }
+
+            span.unit {
+              color: $calltoaction;
+              font-size: 1em;
+              font-weight: bold;
+              display: inline-block;
+            }
+          }
+          &.metric {
+          }
+        }
       }
     }
   }

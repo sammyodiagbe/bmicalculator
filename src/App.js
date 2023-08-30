@@ -8,64 +8,78 @@ import IconAge from "./assets/icon-age.svg";
 import IconMuscle from "./assets/icon-muscle.svg";
 import IconPregnacy from "./assets/icon-pregnancy.svg";
 import IconRace from "./assets/icon-race.svg";
+import { useState } from "react";
 
 function App() {
+  const [unit, setUnit] = useState("metric");
   return (
     <div className="App">
       <header>
+        <div className="background" />
+        <img src={Logo} alt="Company logo" />
         <section className="text-content">
-          <img src={Logo} alt="Company logo" />
-          <h1 className="title">Body Mass Index Calculator</h1>
-          <p>
-            Better understand your weight in relation to your height using our
-            body mass index (BM) calculator. While BMI is not the sole
-            determinant of a healthy weight, it offers a valuable starting point
-            to evaluate your overall health and well-being.
-          </p>
+          <div className="introduction">
+            <h1 className="title">Body Mass Index Calculator</h1>
+            <p>
+              Better understand your weight in relation to your height using our
+              body mass index (BM) calculator. While BMI is not the sole
+              determinant of a healthy weight, it offers a valuable starting
+              point to evaluate your overall health and well-being.
+            </p>
+          </div>
+          <div className="form-container">
+            <form className="form">
+              <h2 className="title">Enter your details below</h2>
+              <div className="unit-container">
+                <label className="input-label" htmlFor="metric">
+                  <input type="radio" id="metric" name="unit" hidden />
+                  <span className="custom-radio">
+                    <span className="sub" />
+                  </span>
+                  <span className="title">Metric</span>
+                </label>
+                <label className="input-label" htmlFor="imperial">
+                  <input type="radio" id="imperial" name="unit" hidden />
+                  <span className="custom-radio">
+                    <span className="sub" />
+                  </span>
+                  <span className="title">Imperial</span>
+                </label>
+              </div>
+              {unit === "metric" ? (
+                <div className="inputs-container metric">
+                  <div className="input-container">
+                    <input placeholder="0" type="number" name="cm" />
+                    <span className="unit">cm</span>
+                  </div>
+                  <div className="input-container">
+                    <input placeholder="0" type="number" name="kg" />
+                    <span className="unit">kg</span>
+                  </div>
+                </div>
+              ) : (
+                <div className="inputs-container imperial">
+                  <div className="input-container">
+                    <input placeholder="0" type="number" name="cm" />
+                    <span className="unit">cm</span>
+                  </div>
+                  <div className="input-container">
+                    <input placeholder="0" type="number" name="kg" />
+                    <span className="unit">kg</span>
+                  </div>
+                  <div className="input-container">
+                    <input placeholder="0" type="number" name="cm" />
+                    <span className="unit">cm</span>
+                  </div>
+                  <div className="input-container">
+                    <input placeholder="0" type="number" name="kg" />
+                    <span className="unit">kg</span>
+                  </div>
+                </div>
+              )}
+            </form>
+          </div>
         </section>
-        <form className="form">
-          <h2 className="title">Enter your details below</h2>
-          <div className="unit-container">
-            <label className="input-label" htmlFor="metric">
-              <input type="radio" id="metric" name="unit" />
-              <span className="custom-radio"></span>
-              <span className="title">Metric</span>
-            </label>
-            <label className="input-label" htmlFor="imperial">
-              <input type="radio" id="imperial" name="unit" />
-              <span className="custom-radio"></span>
-              <span className="title">Imperial</span>
-            </label>
-          </div>
-          <div className="inputs-container metric">
-            <div className="input-container">
-              <input type="number" name="cm" />
-              <span className="unit">cm</span>
-            </div>
-            <div className="input-container">
-              <input type="number" name="kg" />
-              <span className="unit">kg</span>
-            </div>
-          </div>
-          <div className="inputs-container imperial">
-            <div className="input-container">
-              <input type="number" name="cm" />
-              <span className="unit">cm</span>
-            </div>
-            <div className="input-container">
-              <input type="number" name="kg" />
-              <span className="unit">kg</span>
-            </div>
-            <div className="input-container">
-              <input type="number" name="cm" />
-              <span className="unit">cm</span>
-            </div>
-            <div className="input-container">
-              <input type="number" name="kg" />
-              <span className="unit">kg</span>
-            </div>
-          </div>
-        </form>
       </header>
       <section className="result-meaning">
         <img src={ManImage} alt="Man eating" />
