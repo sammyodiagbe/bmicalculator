@@ -144,7 +144,7 @@ function App() {
       </section>
       <section className="limitations">
         <aside className="write-up">
-          <h2>Limitations of BMI</h2>
+          <h2 className="title">Limitations of BMI</h2>
           <p>
             Although BMI is often a practical indivator of healthy weight, it is
             not suited for every person. Specific groups should carefully
@@ -156,7 +156,7 @@ function App() {
           <div className="limitation">
             <div className="head">
               <img src={IconGender} alt="Gender" />
-              <h3>Gender</h3>
+              <h3 className="title">Gender</h3>
             </div>
             <p>
               The development and body fat composition of girls and boys vary
@@ -167,7 +167,7 @@ function App() {
           <div className="limitation">
             <div className="head">
               <img src={IconAge} alt="Gender" />
-              <h3>Age</h3>
+              <h3 className="title">Age</h3>
             </div>
             <p>
               In aging individuals, increased body fat and muscle loss may cause
@@ -177,7 +177,7 @@ function App() {
           <div className="limitation">
             <div className="head">
               <img src={IconMuscle} alt="Gender" />
-              <h3>Muscle</h3>
+              <h3 className="title">Muscle</h3>
             </div>
             <p>
               BMI may misclassify muscular individuals as overweight or obese,
@@ -187,7 +187,7 @@ function App() {
           <div className="limitation">
             <div className="head">
               <img src={IconPregnacy} alt="Gender" />
-              <h3>Pregnancy</h3>
+              <h3 className="title">Pregnancy</h3>
             </div>
             <p>
               Expectant mothers experience weight gain due to their growing
@@ -198,7 +198,7 @@ function App() {
           <div className="limitation">
             <div className="head">
               <img src={IconRace} alt="Gender" />
-              <h3>Race</h3>
+              <h3 className="title">Race</h3>
             </div>
             <p>
               Certain health concerns may affect individuals of some Black and

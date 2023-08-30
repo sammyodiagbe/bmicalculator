@@ -155,5 +155,28 @@ div.App {
     padding: 2em;
     display: grid;
     row-gap: 2em;
+
+    aside.writeup {
+    }
+
+    aside.limitations {
+      display: grid;
+      row-gap: 2em;
+
+      div.limitation {
+        background-color: #fff;
+        border-radius: $input-radius;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        padding: 1em;
+        div.head {
+          display: flex;
+          padding: 1em 0;
+          align-items: center;
+          img {
+            margin-right: 1em;
+          }
+        }
+      }
+    }
   }
 }

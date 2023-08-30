@@ -136,4 +136,22 @@ div.App section.limitations {
   padding: 2em;
   display: grid;
   row-gap: 2em;
+}
+div.App section.limitations aside.limitations {
+  display: grid;
+  row-gap: 2em;
+}
+div.App section.limitations aside.limitations div.limitation {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+}
+div.App section.limitations aside.limitations div.limitation div.head {
+  display: flex;
+  padding: 1em 0;
+  align-items: center;
+}
+div.App section.limitations aside.limitations div.limitation div.head img {
+  margin-right: 1em;
 }/*# sourceMappingURL=app.css.map */
