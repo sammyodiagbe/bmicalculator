@@ -9,9 +9,10 @@ import IconMuscle from "./assets/icon-muscle.svg";
 import IconPregnacy from "./assets/icon-pregnancy.svg";
 import IconRace from "./assets/icon-race.svg";
 import { useState } from "react";
+import React from "react";
 
 function App() {
-  const [unit, setUnit] = useState("metric");
+  const [unit, setUnit] = useState("imperial");
   return (
     <div className="App">
       <header>
@@ -65,22 +66,24 @@ function App() {
                   </div>
                 </div>
               ) : (
-                <div className="inputs-container imperial">
-                  <div className="input-container">
-                    <input placeholder="0" type="number" name="cm" />
-                    <span className="unit">cm</span>
-                  </div>
-                  <div className="input-container">
-                    <input placeholder="0" type="number" name="kg" />
-                    <span className="unit">kg</span>
-                  </div>
-                  <div className="input-container">
-                    <input placeholder="0" type="number" name="cm" />
-                    <span className="unit">cm</span>
-                  </div>
-                  <div className="input-container">
-                    <input placeholder="0" type="number" name="kg" />
-                    <span className="unit">kg</span>
+                <React.Fragment>
+                  <div className="inputs-container imperial">
+                    <div className="input-container">
+                      <input placeholder="0" type="number" name="cm" />
+                      <span className="unit">cm</span>
+                    </div>
+                    <div className="input-container">
+                      <input placeholder="0" type="number" name="kg" />
+                      <span className="unit">kg</span>
+                    </div>
+                    <div className="input-container">
+                      <input placeholder="0" type="number" name="cm" />
+                      <span className="unit">cm</span>
+                    </div>
+                    <div className="input-container">
+                      <input placeholder="0" type="number" name="kg" />
+                      <span className="unit">kg</span>
+                    </div>
                   </div>
                   <div className="result-container">
                     <h3>Welcome</h3>
@@ -89,7 +92,7 @@ function App() {
                       result here.
                     </p>
                   </div>
-                </div>
+                </React.Fragment>
               )}
             </form>
           </div>

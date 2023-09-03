@@ -1,9 +1,8 @@
 div.App header {
-  display: grid;
-  grid-template-columns: 1fr;
+  max-width: 100vw;
 }
 div.App header div.background {
-  width: 100%;
+  width: 100vw;
   position: absolute;
   top: 0;
   left: 0;
@@ -14,9 +13,7 @@ div.App header div.background {
   border-bottom-right-radius: 30px;
 }
 div.App header section.text-content {
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 20px;
+  max-width: 100%;
   padding: 2em;
 }
 div.App header section.text-content div.introduction {
@@ -85,6 +82,8 @@ div.App header div.form-container form div.unit-container label.input-label span
 }
 div.App header div.form-container form div.inputs-container {
   padding: 1em 0;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 div.App header div.form-container form div.inputs-container div.result-container {
   padding: 1em;
@@ -100,7 +99,7 @@ div.App header div.form-container form div.inputs-container div.result-container
 }
 div.App header div.form-container form div.inputs-container div.input-container {
   display: grid;
-  grid-template-columns: 1fr max-content;
+  grid-template-columns: 1fr min-content;
   align-items: center;
   margin-bottom: 1em;
   border: 1px solid lightgrey;
@@ -113,12 +112,17 @@ div.App header div.form-container form div.inputs-container div.input-container 
   padding: 1em 0;
   font-size: 1em;
   font-weight: bold;
+  background: transparent;
 }
 div.App header div.form-container form div.inputs-container div.input-container span.unit {
   color: #345ff6;
   font-size: 1em;
   font-weight: bold;
   display: inline-block;
+}
+div.App header div.form-container form div.inputs-container.imperial {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 div.App section.result-meaning aside.write-up {
   padding: 2em;
